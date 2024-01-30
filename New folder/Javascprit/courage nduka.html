@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Introduction to JavaScript </title>
+   <body>
+    <p id="answer"></p>
+    <p id="answer1"></p>
+    <script>
+   //Write a javascript block of code that takes an input of different letter casing and returns all capital letters on a html page.
+   const input= prompt( 'what is your Name ')
+    let input2 = input.toUpperCase();
+    answerElement = document.getElementById("answer")
+    answerElement.innerText = input2;
+
+    //Create a function countVowels that takes a string as input and returns the count of vowels (a, e, i, o, u) in the string.
+    countVowels()
+    function countVowels( Word){
+      let word = prompt( "what is your name")
+    let word2 = word.match(/[aeiou]/ig);
+     answerElement = document.getElementById("answer1")
+    answerElement.innerText = word2;
+    return word2;
+    }; 
+    //Create a function concatenateStrings that takes two strings as input and returns a new string that is the concatenation of the two input strings.
+   concatenateStrings()
+    function concatenateStrings(){
+      var newstring= prompt(' First Name');
+      alert("Hello"+" "+newstring+" "+"welcome to my world");
+    }
+  
+  
+    
+    </script>
+    
+   </body>
+  </head>
+</html> 

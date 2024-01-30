@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>assigment calculator</title>
+    <body>
+      <!-- Create a simple calculator in JavaScript. The calculator should be able to perform addition, subtraction, multiplication, and division operations. Prompt the user to enter two numbers and an operation (like '+', '-', '*', '/'). Perform the calculation and display the result...
+      -->
+      <h1>Result from the calculator</h1>
+      <p  class="display" id="answer"></p> 
+      <p id="array" class="display"></p>
+      <p id="maximum" class="display"></p>
+      <p id="addition" class="display"></p>
+      <p id="unduplicate" class="display"></p>
+      <style>
+      .display{
+        color: black;
+        font-size: 100px;
+        background-color: gray;
+        border: 10px;
+        padding: 10px;
+      }
+      </style>
+<script>
+  //Create a simple calculator in JavaScript. The calculator should be able to perform addition, subtraction, multiplication, and division operations. Prompt the user to enter two numbers and an operation (like '+', '-', '*', '/'). Perform the calculation and display the result...
+
+  const a=+prompt("Enter first number");
+  let o=prompt("Enter operator");
+  const b=+prompt("Enter second number")
+
+   function calculator(){
+    if (o == '+'){
+      let addition= (a+b)
+      answerElement = document.getElementById("answer")
+    answerElement.innerText = addition;
+    }if (o=='-'){
+      let subtraction=(a-b)
+      answerElement = document.getElementById("answer")
+    answerElement.innerText = subtraction;
+    }if(o=='*'){
+      let multiplication=(a*b)
+      answerElement = document.getElementById("answer")
+    answerElement.innerText = multiplication;
+    }if (o =='/'){
+      let division=(a/b)
+      answerElement = document.getElementById("answer")
+    answerElement.innerText = division;
+    }
+   }
+   calculator()
+  
+   //Create a simple program that manipulates a list of numbers. The program should perform the following operations:
+   
+   //Add Numbers: Allow the user to add numbers to the list.
+    const listManipulation=[ 1,2,3,4,5,6,7,8,9,9,5,5,4,3];
+   let addNumber=prompt('add number to the list ');
+   listManipulation.push(addNumber)
+   answerElement = document.getElementById("array")
+    answerElement.innerText = listManipulation;
+
+   //Find Maximum: Find and display the maximum number in the list.
+ let numbers = listManipulation;
+let max = numbers[0]; // initialize to the first value
+
+for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+    }
+}answerElement = document.getElementById("maximum")
+    answerElement.innerText = max;
+
+  //Calculate Average: Calculate and display the average of all numbers in the list  
+ const myNums = listManipulation;
+let sum = 0;
+myNums.forEach( num => {
+  sum += num;
+})
+console.log(sum) 
+answerElement = document.getElementById("addition")
+    answerElement.innerText = sum;
+
+//Remove Duplicates: Remove duplicate numbers from the list.
+ let duplicate = listManipulation
+ function removeduplicate(data){
+  return data.filter( (value , index) => data.indexOf(value) === index);
+ } 
+ answerElement = document.getElementById("unduplicate")
+    answerElement.innerText = removeduplicate(duplicate);
+</script>
+    </body>
+  </html>

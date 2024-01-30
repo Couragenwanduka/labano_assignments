@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> assignment objects</title>
+  </head>
+  <body>
+    <script>
+      price= 2095 
+      const product = { 
+        name: 'Basketball',
+        price:' 2095',
+        };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price),
+       
+       product.price  = price + 500
+       console.log(product.price);
+       
+       const object1 ={
+        deliverytime:' 3days '
+       };
+       console.log(object1);
+
+      price2=  2000
+       const product2 ={
+        name: 'bad bitch',
+        price2: '2000',
+       };
+       console.log( product2);
+       console.log( product2.name);
+       console.log( product2.price2);
+       const object2 = {
+        deliverytime: '7days' 
+       };
+       console.log( object2);
+ 
+       function comparePrice (price, price2){
+  if ( price>price2){
+    return " Basketball";
+  } else if ( price< price2)
+  return 'Badbitch';
+ } //else if ( product = product2)
+ //return ' equal ';
+ let result = comparePrice( price , price2);
+ console.log(result);
+
+    </script>
+  </body>
+</html>
